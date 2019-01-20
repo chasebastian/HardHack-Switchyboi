@@ -226,11 +226,11 @@ pins = (
 )
 
 def alarm():
-	callback(0,
 	while data:
 		
 		motionDetected = GPIO_MDI.read(GPIO_MDI)
 		if motionDetected:
 			GPIO_BO.write(GPIO_BO, 1)
 	GPIO_BO.write(GPIO_BO,0)
-	time.
+	time.sleep(10000)
+	alarm()
